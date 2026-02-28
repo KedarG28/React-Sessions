@@ -1,6 +1,7 @@
 import './App.css'
 import Counter from './assets/components/counter'
 import Card from './assets/components/card'
+import Lecture2 from './assets/components/Lecture2'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <p>Hello</p>
       </div> */}
       <Card/>
+      <Lecture2/>
     </>
   )
 }
