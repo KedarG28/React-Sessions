@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import Person from "../person.json";
+import Person from "../../person.json";
 import axios from "axios";
 
 const Card = () => {

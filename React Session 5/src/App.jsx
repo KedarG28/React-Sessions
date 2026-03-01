@@ -1,7 +1,8 @@
 import './App.css'
-import Counter from './assets/components/counter'
-import Card from './assets/components/card'
-import Lecture2 from './assets/components/Lecture2'
+import Counter from './assets/components/Lecture1/counter'
+import Card from './assets/components//Lecture1/card'
+import Lecture2 from './assets/components/Lecture2/Lecture2'
+import Lecture4 from './assets/components/Lecture4/Lecture4'
 
 function App() {
 
@@ -12,8 +13,9 @@ function App() {
       <div className="page1">
         <p>Hello</p>
       </div> */}
-      <Card/>
-      <Lecture2/>
+      {/* <Card/>
+      <Lecture2/> */}
+      <Lecture4/>
     </>
   )
 }

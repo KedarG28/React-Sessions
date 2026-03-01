@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Datacomponent from './datacomponent'
+import Datacomponent from '../Lecture2/datacomponent'
 import axios from 'axios'
 
 const Component = () => {
