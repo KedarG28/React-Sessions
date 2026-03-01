@@ -20,8 +20,8 @@ function App() {
       <Lecture2/> */}
       {/* <Lecture4/> */}
       {/* <ContextAPIcomponent/> */}
-      <Component1/>
       <Component2/>
+    
     </>
   )
 }

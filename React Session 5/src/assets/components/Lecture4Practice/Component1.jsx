@@ -1,5 +1,6 @@
 import React, { useEffect, useState, createContext } from "react";
 import axios from "axios";
+import Component2 from "./Component2";
 
 const menuCard = createContext();
 const Component1 = ({ children }) => {
@@ -8,7 +9,8 @@ const Component1 = ({ children }) => {
     axios
       .get("https://dummyjson.com/carts")
       .then((response) => {
-        setMenuData(response);
+        console.log('123', response.data.carts);
+        setMenuData(response.data.carts);
       })
       .catch((error) => {
         console.log("Error occurred ! ", error);
@@ -17,7 +19,8 @@ const Component1 = ({ children }) => {
 
   return (
     <>
-      <menuCard.Provider value={menuCard}>{children}</menuCard.Provider>
+     
+      <menuCard.Provider value={menuData}>{children}</menuCard.Provider>
     </>
   );
 };
