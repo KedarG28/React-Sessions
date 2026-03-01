@@ -1,32 +1,35 @@
-import React, { createContext } from 'react'
+import React from 'react'
+import { createContext } from 'react';
 import { useState } from 'react';
-import { useEffect} from 'react';
 import axios from 'axios';
+import { useEffect } from 'react';
 
-const ContextAPI = () => {
+const HelloDataContext = createContext();
 
-const ContextA = createContext()
+const ContextAPI = ({children}) => {
 
-const [user2Data, setuser2Data] = useState(null);
+     const [helloData, sethelloData] = useState(null);
 
   useEffect(() => {
     axios
       .get(`https://jsonplaceholder.typicode.com//todos/1`)
       .then((response) => {
-        setuser2Data(response.data);
+        sethelloData(response.data);
       })
       .catch((error) => {
         console.log("This is an error", error);
       });
   },[]);
+
+
   return (
     <>
-    <ContextA.Provider value ={user2Data}>
+    <HelloDataContext.Provider value={helloData}>
     {children}
-    </ContextA.Provider>
+    </HelloDataContext.Provider>
     </>
   )
 }
 
-export default ContextAPI;
-export {ContextA}
+export default ContextAPI
+export {HelloDataContext}
